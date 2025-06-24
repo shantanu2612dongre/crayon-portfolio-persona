@@ -1,6 +1,8 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 /* Definition of the design system. All colors, gradients, fonts, etc should be defined here. */
 
@@ -99,5 +101,57 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
   }
+}
+
+/* Crayon effect for headings */
+.crayon-heading {
+  position: relative;
+  color: #FF8C42;
+  text-shadow: 
+    1px 1px 0px rgba(255, 140, 66, 0.3),
+    2px 2px 0px rgba(255, 140, 66, 0.2),
+    3px 3px 0px rgba(255, 140, 66, 0.1);
+  
+  /* Add slight texture */
+  background: linear-gradient(45deg, transparent 20%, rgba(255, 140, 66, 0.1) 20%, rgba(255, 140, 66, 0.1) 40%, transparent 40%),
+              linear-gradient(-45deg, transparent 20%, rgba(255, 140, 66, 0.05) 20%, rgba(255, 140, 66, 0.05) 40%, transparent 40%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.crayon-text {
+  position: relative;
+  text-shadow: 
+    1px 1px 0px rgba(255, 140, 66, 0.2),
+    2px 2px 0px rgba(255, 140, 66, 0.1);
+}
+
+/* Enhanced button hover effects */
+button:hover {
+  transform: translateY(-1px);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #8B5CF6;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7C3AED;
 }
